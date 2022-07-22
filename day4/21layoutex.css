@@ -1,0 +1,82 @@
+header{
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+    margin-left: -10px;
+    margin-top: -20px;
+    
+}
+
+h3{
+    text-align: center;
+}
+nav{
+    
+}
+body{
+    width: 100%;
+}
+td{
+    margin-left: 100px;
+}
+ul{
+    /* border : 1px solid blue; */
+    list-style: none;
+    background-color: brown;
+    overflow: hidden;
+    margin: auto;
+    margin-left: -10px;
+    margin-top: -20px;
+}
+ul > li{
+    float: left;
+    /* border: 1px solid blue; */
+}
+/* 위의 border로 영역 확인 : ul 영역이 li영역보다 작습니다.*/
+ul > li a{
+    display: block;
+    color: aliceblue;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+ul > li a:hover{
+    background-color: black;
+    color: white;
+}
+ul > li:last-child{
+    float: right;
+    margin-right: 20px;
+}
+main{
+    background-color: azure;
+    padding: 20px;
+    height: 500px;
+    margin-left: -10px;
+}
+footer{
+    background-color: cornflowerblue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-left: -10px;
+}
+dropbtn{
+    background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }

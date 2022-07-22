@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4_레이아웃</title>
+    <style>
+        body{
+           background-color: rgb(229, 229, 229);
+       }
+   h3{
+       text-align: center;
+   }
+   
+   td{
+       width: 50px;
+       border: 1px solid gray;
+       text-align: center;
+   }
+   table{
+       width: 400px;
+   }
+   </style>
+    <link rel="stylesheet" href="17weblayout.css">
+</head>
+<body>
+    <!-- div : 일반적인 용도로 사용하는 블록요소-->
+    <div class="header">
+        <!-- header -->
+        <h3 style="text-align: center;" class="header">홈쇼핑 회원관리 v1.0</h3>
+    </div>
+    <div class="nav">
+        <!-- nav -->
+        <ul>
+            <li><a href="14hrdform.html">회원등록</a></li>
+            <li><a href="15hrdtable.html">회원목록조회</a></li>
+            <li><a href="">회원매출조회</a></li>
+            <li><a href="">홈으로</a></li>
+            <!-- <li><span>홈으로</span></li> -->
+        </ul>
+    </div>
+    <div class="main">
+        <!-- main -->
+        <div style="width: 70%; margin: auto;">
+            <h3>홈쇼핑 회원 등록</h3>
+            <table style="width: 100%;">
+            <tr>
+                <td>회원번호(자동발생)</td>
+                <td><input type="text" name="no" ></td>
+            </tr>
+            <tr>
+                <td>회원성명</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>회원전화</td>
+                <td><input type="text" name="phone"></td>
+        
+            </tr>
+            <tr>
+                <td>회원주소</td>
+                <td><input type="text" name="addr"></td>
+        
+            </tr>
+            <tr>
+                <td>가입일자</td>
+                <td><input type="text" name="date"></td>
+        
+            </tr>
+            <tr>
+                <td>고객등급 [A:VIP,B:일반,C:직원]</td>
+                <td><input type="text" name="grade"></td>
+        
+            </tr>
+            <tr>
+                <td>도시코드</td>
+                <td><input type="text" name="zip"></td>
+        
+            </tr>
+            <tr>
+            <td colspan="2"><button>등록</button><button>조회</button></td>
+            </tr>
+            </table>
+            </div>
+    </div>
+    <div class="footer">
+        <!-- footer-->
+        HRDKOREA Copyright&copy;2022 All rights reserved. Human Resources Development Service of Korea.
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4_레이아웃</title>
+    <link rel="stylesheet" href="17weblayout.css">
+</head>
+<body>
+    <!-- div : 일반적인 용도로 사용하는 블록요소-->
+    <div>
+        <!-- header -->
+        <h3 style="text-align: center;" class="header">홈쇼핑 회원관리 v1.0</h3>
+    </div>
+    <div>
+        <!-- nav -->
+        <ul class="nav">
+            <li><a href="">회원등록</a></li>
+            <li><a href="">회원목록조회</a></li>
+            <li><a href="">회원매출조회</a></li>
+            <li><a href="">홈으로</a></li>
+        </ul>
+    </div>
+    <div>
+        <!-- main -->
+        <h4 style="text-align: center;">쇼핑몰 회원관리 프로그램</h4>
+        <p>쇼핑몰 회원정보와 회원매출정보 데이터베이스를 구축하고 회원관리 프로그램을 작성합니다.<br>
+            프로그램작성순서
+            <ol>
+            <li>회원정보 테이블을 생성한다.</li>
+            <li>매출정보 테이블을 생성한다.</li>
+            <li>회원정보,매출정보 테이블에 제시된 문제지의 참조데이터를 추가생성한다.</li>
+            <li>회원정보 입력화면 프로그램을 작성한다.</li>
+            <li>회원정보 조회 프로그램을 작성한다.</li>
+            <li>회원 매출 정보 조회 프로그램을 작성한다.</li>
+        </ol>
+    </div>
+    <div class="footer">
+        <!-- footer-->
+        HRDKOREA Copyright&copy;2022 All rights reserved. Human Resources Development Service of Korea.
+    </div>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></body>
+</html>
