@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result" style="font-size: 0.7em;"></p>
+    <p id="list"></p>
+    <script>
+        //비동기 통신을 위한 객체 생성
+        const xhr = new XMLHttpRequest();
+
+        //1.HTTP 요청 초기화 : method,url
+        xhr.open("GET","https://dapi.kakao.com/v2/search/vclip?query=에스파&page=2&sort=recency");   //size는 기본값 10
+        //2. 요청 header 설정
+        xhr.setRequestHeader("Authorization","KakaoAK e7bf7be72cc807f12822723f25219032");
+        //3.HTTP요청 전송 : 추가적인 파라미터는 함께 전송
+        xhr.send();
+        //4.onload 이벤트 : 요청이 완료되고 이에대한 응답이 왔을때 실행될 onload 이벤트 핸들러 작성.
+        xhr.onload = function(){
+                //if(xhr.status==200)   //응답코드가 200일때만
+
+                //요청에 대한 응답을 response 프로퍼티가 저장합니다.
+                document.getElementById('result').innerHTML=xhr.response
+
+                //응답으로 받은 documents - 객체배열
+                //          객체구성 : author,datetime, title, url,play-time,thumbnail
+                //          ->프로퍼티 값들을 태그요소로 표현(출력)
+
+                let $response = JSON.parse(xhr.response)
+                let results = $response.documents
+                results.forEach(element => {
+                    const $ul = document.createElement('ul')
+                    const temp = `<li>${element.author}</li>
+                    <li>${element.title}</li>
+                    <li>${element.datetime}</li>
+                    <li>${element.play_time}</li>
+                    <li><a href=${element.url} target="_blank"><img src=${element.thumbnail} width="200px"></a></li>`
+                    //url은 a태그, thumbnail은 img태그에 속성값으로 활용할수 있습니다.
+
+                    $ul.innerHTML=temp
+                    document.getElementById('list').appendChild($ul)
+
+                })
+
+        }
+    </script>
+    
+</body>
+</html>
